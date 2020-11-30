@@ -1,6 +1,6 @@
 # ishop
 
-A new Flutter application.
+A new shop Flutter application.
 
 ## Getting Started
 
