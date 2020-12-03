@@ -22,6 +22,13 @@ class _HomePageState extends State<HomePage> {
 //    {"url": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1627162812,3625349309&fm=26&gp=0.jpg"},
 //    {"url": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2716828631,1254005294&fm=26&gp=0.jpg"}
 //  ];
+  @override
+  void initState(){
+    super.initState();
+    _getFocusData();
+    _getHotProductData();
+    _getBestProductData();
+  }
 
   List _focusData = [];
   List _hotProductList = [];
@@ -237,9 +244,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     ScreenAdapter.init(context);
 //    jiexi();
-    _getFocusData();
-    _getHotProductData();
-    _getBestProductData();
 //    ScreenUtil.init(context, designSize: Size(750, 1334));
     return ListView(
       children: [
