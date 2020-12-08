@@ -15,7 +15,11 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin{
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 
 //  List<Map> imgList = [
 //    {"url": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1741067410,3185901984&fm=26&gp=0.jpg"},
