@@ -33,6 +33,9 @@ class _TabsState extends State<Tabs> {
       body: PageView(
         controller: this._pageController,
         children: this._pageList,
+        onPageChanged: (index){
+          /// 监听页面改变
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
