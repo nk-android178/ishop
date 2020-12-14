@@ -109,18 +109,25 @@ class _CategoryPageState extends State<CategoryPage> with AutomaticKeepAliveClie
                   ///处理图片
                   String pic = this._rightList[index].pic;
                   pic = Config.Api+pic.replaceAll('\\', '/');
-                  return Container(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 1/1,
-                          child: Image.network(pic, fit: BoxFit.cover),
-                        ),
-                        Container(
-                          height: ScreenAdapter.height(28),
-                          child: Text("${this._rightList[index].title}"),
-                        )
-                      ],
+                  return InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/productlist',arguments: {
+                        "cid":this._rightList[index].sId
+                      });
+                    },
+                    child: Container(
+                      child: Column(
+                        children: [
+                          AspectRatio(
+                            aspectRatio: 1/1,
+                            child: Image.network(pic, fit: BoxFit.cover),
+                          ),
+                          Container(
+                            height: ScreenAdapter.height(28),
+                            child: Text("${this._rightList[index].title}"),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 }),

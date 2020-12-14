@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ishop/pages/tabs/Tabs.dart';
+import '../pages/ProductList.dart';
 
 
 final routes = {
-  '/': (context) => Tabs()
+  '/': (context) => Tabs(),
+  '/productlist': (context, {arguments}) => ProductList(arguments:arguments)
 };
 
 //配置根组件命名路由传参
